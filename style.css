@@ -10,3 +10,12 @@
     border: 1px solid black;
   }
 
+  .hover {
+    background: red;
+}
+  
+.row div:hover,
+.cell div:hover {
+  background-color: blue;
+  color: white;
+}
