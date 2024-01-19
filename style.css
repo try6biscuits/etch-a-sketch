@@ -1,21 +1,11 @@
 #container {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
   
-  .row div,
-  .cell div {
+.cell {
     width: 100px;
     height: 100px;
     border: 1px solid black;
+    margin: 5px; /* Apply margin only to cells */
   }
-
-  .hover {
-    background: red;
-}
-  
-.row div:hover,
-.cell div:hover {
-  background-color: blue;
-  color: white;
-}
