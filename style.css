@@ -7,5 +7,16 @@
     width: 100px;
     height: 100px;
     border: 1px solid black;
-    margin: 5px; /* Apply margin only to cells */
+    margin: 5px; 
   }
+
+/* .green-cell {
+  background-color: green;
+} */ 
+/* Potential Future Changes */
+
+button {
+  border-radius: 24px;
+  padding: 16px;
+  font-size: 24px;
+}
