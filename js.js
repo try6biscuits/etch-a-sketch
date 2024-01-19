@@ -9,3 +9,13 @@ function makeDivCells(numCells) {
 }
 
 makeDivCells(256);
+
+const cells = document.querySelectorAll('.cell')
+cells.forEach(cell => {
+    cell.addEventListener("mouseenter", (event) => {
+        event.target.style.background = 'green' 
+        // event.target.classList.add('green-cell')
+        // Potential Future Changes
+    });
+  });
+  
