@@ -21,7 +21,8 @@ cells.forEach(cell => {
   });
 
   function promptFunction() {
-    prompt("Change the grid size:");
+   let userInput = prompt("Change the grid size:");
+   return userInput
   }
   const btn = document.querySelector('.changeSize')
   btn.addEventListener('click', promptFunction);
