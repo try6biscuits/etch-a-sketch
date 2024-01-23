@@ -1,6 +1,7 @@
 const container = document.querySelector('#container');
 
 function makeDivCells(numCells) {
+  container.innerHTML = '';
   for (let i = 0; i < numCells; i++) {
     let cell = document.createElement('div');
     cell.classList.add('cell');
@@ -25,4 +26,7 @@ cells.forEach(cell => {
    return userInput
   }
   const btn = document.querySelector('.changeSize')
-  btn.addEventListener('click', promptFunction);
+  btn.addEventListener('click', () => {
+    const newGridSize = promptFunction();
+    makeDivCells(newGridSize);
+});
