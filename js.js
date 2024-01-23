@@ -1,15 +1,19 @@
 const container = document.querySelector('#container');
 
 function makeDivCells(numCells) {
+  const totalArea = 100 * 100 * 256
+  const newArea = totalArea / numCells
+  const roundedCellSize = Math.round(Math.sqrt(newArea)); 
   container.innerHTML = '';
   for (let i = 0; i < numCells; i++) {
     let cell = document.createElement('div');
     cell.classList.add('cell');
     container.appendChild(cell);
   }
+
 }
 
-makeDivCells(256);
+makeDivCells(256)
 
 const cells = document.querySelectorAll('.cell')
 cells.forEach(cell => {
@@ -28,5 +32,5 @@ cells.forEach(cell => {
   const btn = document.querySelector('.changeSize')
   btn.addEventListener('click', () => {
     const newGridSize = promptFunction();
-    makeDivCells(newGridSize);
+    makeDivCells(newGridSize || 256);
 });
