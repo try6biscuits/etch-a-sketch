@@ -1,7 +1,7 @@
 const container = document.querySelector('#container');
 
 function makeDivCells(numCells) {
-  const totalArea = 100 * 100 * 256
+  const totalArea = 50 * 50 * 256
   const newArea = totalArea / numCells
   const roundedCellSize = Math.round(Math.sqrt(newArea)); 
   const cellStyle = document.querySelector('.cell'); // Select a single cell for reference
