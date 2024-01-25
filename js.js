@@ -1,5 +1,6 @@
 const container = document.querySelector("#container");
 function makeGrid(rows, cols) {
+  container.innerHTML = '';
   for (let r = 0; r < rows; r++) {
     const row = document.createElement('div'); // Create a row element
     row.classList.add('rows')
@@ -25,7 +26,10 @@ cells.forEach(cell => {
 mouseOver() 
 
 function alertFunction() {
-  prompt('Change grid size: ')
+  let userChoice = parseInt(prompt('Change grid size: ')) 
+  if (isNaN(userChoice) || userChoice == '' || userChoice == null || userChoice == undefined) {
+    alert('Error')
+  }
 }
 const btn = document.querySelector('.btn')
 btn.addEventListener('click', alertFunction);
