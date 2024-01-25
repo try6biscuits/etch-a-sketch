@@ -23,3 +23,10 @@ cells.forEach(cell => {
 });
 }
 mouseOver() 
+
+function alertFunction() {
+  prompt('Change grid size: ')
+}
+const btn = document.querySelector('.btn')
+btn.addEventListener('click', alertFunction);
+
