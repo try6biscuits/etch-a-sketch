@@ -13,14 +13,16 @@ function makeGrid(rows, cols) {
     }
   }
 }
-makeGrid(16, 16);
+function defaultGrid() {
+  makeGrid(16, 16);
 const cells = document.querySelectorAll('.cells');
   const sum = Math.floor(500 / 16); 
   cells.forEach(cell => {
     cell.style.width = sum + 'px';
     cell.style.height = sum + 'px';
   });
-  
+}
+gridFunction()
 function mouseOver() {
 const cells = document.querySelectorAll('.cells');
 cells.forEach(cell => {
