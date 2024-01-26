@@ -56,8 +56,18 @@ function alertFunction() {
 
 const btn = document.querySelector('.btn')
 btn.addEventListener('click', alertFunction);
-const btnChangeToRed = document.querySelector('.changeToRedBtn')
-btnChangeToRed.addEventListener('click', changeToRed);
+
+const changeToRedBtn = document.querySelector('.changeToRedBtn')
+changeToRedBtn.addEventListener('click', changeToRed);
+
+const changeToGreenBtn = document.querySelector('.changeToGreenBtn')
+changeToGreenBtn.addEventListener('click', changeToGreen);
+
+const changeToYellowBtn = document.querySelector('.changeToYellowBtn')
+changeToYellowBtn.addEventListener('click', changeToYellow);
+
+const changeToBlackBtn = document.querySelector('.changeToBlackBtn')
+changeToBlackBtn.addEventListener('click', changeToBlack);
 
 function changeToRed() {
   const cells = document.querySelectorAll('.cells');
@@ -67,3 +77,29 @@ function changeToRed() {
     });
   });
   }
+
+  function changeToGreen() {
+    const cells = document.querySelectorAll('.cells');
+    cells.forEach(cell => {
+      cell.addEventListener('mouseover', function() {
+        this.style.backgroundColor = 'green'; // Use `this` to refer to the current cell
+      });
+    });
+    }
+
+    function changeToYellow() {
+      const cells = document.querySelectorAll('.cells');
+      cells.forEach(cell => {
+        cell.addEventListener('mouseover', function() {
+          this.style.backgroundColor = 'yellow'; // Use `this` to refer to the current cell
+        });
+      });
+      }
+      function changeToBlack() {
+        const cells = document.querySelectorAll('.cells');
+        cells.forEach(cell => {
+          cell.addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'black'; // Use `this` to refer to the current cell
+          });
+        });
+        }
