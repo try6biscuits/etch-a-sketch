@@ -28,3 +28,10 @@ body {
     padding: 5px;
     background-color: antiquewhite;
 }
+
+.bodyContainer {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    height: 100vh; /* Full viewport height */
+    justify-content: center;
+}
