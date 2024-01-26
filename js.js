@@ -14,7 +14,13 @@ function makeGrid(rows, cols) {
   }
 }
 makeGrid(16, 16);
-
+const cells = document.querySelectorAll('.cells');
+  const sum = Math.floor(500 / 16); 
+  cells.forEach(cell => {
+    cell.style.width = sum + 'px';
+    cell.style.height = sum + 'px';
+  });
+  
 function mouseOver() {
 const cells = document.querySelectorAll('.cells');
 cells.forEach(cell => {
@@ -37,7 +43,7 @@ function alertFunction() {
   makeGrid(userChoice, userChoice);
 
   const cells = document.querySelectorAll('.cells');
-  const sum = Math.floor(960 / userChoice); // Calculate after grid creation
+  const sum = Math.floor(500 / userChoice); // Calculate after grid creation
   cells.forEach(cell => {
     cell.style.width = sum + 'px';
     cell.style.height = sum + 'px';
