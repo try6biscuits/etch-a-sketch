@@ -34,4 +34,5 @@ body {
     align-items: center; /* Vertical alignment */
     height: 100vh; /* Full viewport height */
     justify-content: center;
+    gap: 16px;
 }
