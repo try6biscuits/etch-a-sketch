@@ -9,4 +9,9 @@
     height: 50px; 
 }
 
-  
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 100px;
+}
