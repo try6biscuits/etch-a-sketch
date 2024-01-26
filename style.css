@@ -4,7 +4,6 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 .cells {
     border: solid;
@@ -21,7 +20,10 @@ body {
 }
 
 .btn,
-.changeToRedBtn {
+.changeToRedBtn,
+.changeToGreenBtn,
+.changeToYellowBtn,
+.changeToBlackBtn {
     border-radius: 28px;
     padding: 5px;
     background-color: antiquewhite;
