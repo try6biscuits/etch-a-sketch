@@ -23,6 +23,15 @@ const cells = document.querySelectorAll('.cells');
   });
 }
 defaultGrid()
+function mouseOver() {
+const cells = document.querySelectorAll('.cells');
+cells.forEach(cell => {
+  cell.addEventListener('mouseover', function() {
+    this.style.backgroundColor = 'black'; // Use `this` to refer to the current cell
+  });
+});
+}
+mouseOver() 
 
 function alertFunction() {
   container.removeEventListener('mouseover', mouseOver);
@@ -47,18 +56,8 @@ function alertFunction() {
 
 const btn = document.querySelector('.btn')
 btn.addEventListener('click', alertFunction);
-
 const btnChangeToRed = document.querySelector('.changeToRedBtn')
 btnChangeToRed.addEventListener('click', changeToRed);
-
-function mouseOver() {
-  const cells = document.querySelectorAll('.cells');
-  cells.forEach(cell => {
-    cell.addEventListener('mouseover', function() {
-      this.style.backgroundColor = 'black'; // Use `this` to refer to the current cell
-    });
-  });
-  }
 
 function changeToRed() {
   const cells = document.querySelectorAll('.cells');
@@ -68,4 +67,3 @@ function changeToRed() {
     });
   });
   }
-  
