@@ -22,12 +22,12 @@ const cells = document.querySelectorAll('.cells');
     cell.style.height = sum + 'px';
   });
 }
-gridFunction()
+defaultGrid()
 function mouseOver() {
 const cells = document.querySelectorAll('.cells');
 cells.forEach(cell => {
   cell.addEventListener('mouseover', function() {
-    this.style.backgroundColor = 'red'; // Use `this` to refer to the current cell
+    this.style.backgroundColor = 'black'; // Use `this` to refer to the current cell
   });
 });
 }
