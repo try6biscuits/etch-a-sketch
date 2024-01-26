@@ -26,11 +26,25 @@ cells.forEach(cell => {
 mouseOver() 
 
 function alertFunction() {
-  let userChoice = parseInt(prompt('Change grid size: ')) 
-  if (isNaN(userChoice) || userChoice == '' || userChoice == null || userChoice == undefined) {
-    alert('Error')
+  container.removeEventListener('mouseover', mouseOver);
+
+  let userChoice = parseInt(prompt('Change grid size: '));
+  if (isNaN(userChoice) || userChoice <= 0) {
+    alert('Error');
+    return;
   }
+
+  makeGrid(userChoice, userChoice);
+
+  const cells = document.querySelectorAll('.cells');
+  const sum = Math.floor(960 / userChoice); // Calculate after grid creation
+  cells.forEach(cell => {
+    cell.style.width = sum + 'px';
+    cell.style.height = sum + 'px';
+  });
+
+  mouseOver();
 }
+
 const btn = document.querySelector('.btn')
 btn.addEventListener('click', alertFunction);
-
