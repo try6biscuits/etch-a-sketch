@@ -103,3 +103,21 @@ function changeToRed() {
           });
         });
         }
+
+// const resetButton = document.querySelector('.resetButton')
+// resetButton.addEventListener('click', resetButton);
+        
+// const holdDownButton = document.querySelector('.holdDownButton')
+// holdDownButton.addEventListener('click', holdDownButton);
+        
+const eraseButton = document.querySelector('.eraseButton')
+eraseButton.addEventListener('click', eraseFunction);
+
+function eraseFunction() {
+  const cells = document.querySelectorAll('.cells');
+  cells.forEach(cell => {
+    cell.addEventListener('mouseover', function() {
+      this.style.backgroundColor = 'white'; // Use `this` to refer to the current cell
+    });
+  });
+  }
