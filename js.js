@@ -16,7 +16,7 @@ function makeGrid(rows, cols) {
 function defaultGrid() {
   makeGrid(16, 16);
 const cells = document.querySelectorAll('.cells');
-  const sum = Math.floor(500 / 16); 
+  const sum = Math.floor(250 / 16); 
   cells.forEach(cell => {
     cell.style.width = sum + 'px';
     cell.style.height = sum + 'px';
@@ -114,7 +114,6 @@ function resetGrid () {
 // const holdDownButton = document.querySelector('.holdDownButton')
 // holdDownButton.addEventListener('click', holdDownFunction);
 
-       
 const eraseButton = document.querySelector('.eraseButton')
 eraseButton.addEventListener('click', eraseFunction);
 
