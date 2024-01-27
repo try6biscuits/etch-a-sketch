@@ -24,7 +24,10 @@ body {
 .changeToRedBtn,
 .changeToGreenBtn,
 .changeToYellowBtn,
-.changeToBlackBtn {
+.changeToBlackBtn,
+.resetButton,
+.holdDownButton,
+.eraseButton {
     border-radius: 28px;
     padding: 5px;
     background-color: antiquewhite;
