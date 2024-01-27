@@ -104,12 +104,17 @@ function changeToRed() {
         });
         }
 
-// const resetButton = document.querySelector('.resetButton')
-// resetButton.addEventListener('click', resetButton);
+const resetButton = document.querySelector('.resetButton')
+resetButton.addEventListener('click', resetGrid);
+
+function resetGrid () {
+  defaultGrid()
+}
         
 // const holdDownButton = document.querySelector('.holdDownButton')
-// holdDownButton.addEventListener('click', holdDownButton);
-        
+// holdDownButton.addEventListener('click', holdDownFunction);
+
+       
 const eraseButton = document.querySelector('.eraseButton')
 eraseButton.addEventListener('click', eraseFunction);
 
