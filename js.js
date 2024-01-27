@@ -108,7 +108,9 @@ const resetButton = document.querySelector('.resetButton')
 resetButton.addEventListener('click', resetGrid);
 
 function resetGrid () {
+  container.removeEventListener('mouseover', mouseOver);
   defaultGrid()
+  mouseOver();
 }
         
 // const holdDownButton = document.querySelector('.holdDownButton')
