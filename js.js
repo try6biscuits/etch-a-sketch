@@ -112,9 +112,6 @@ function resetGrid () {
   defaultGrid()
   mouseOver();
 }
-        
-// const holdDownButton = document.querySelector('.holdDownButton')
-// holdDownButton.addEventListener('click', holdDownFunction);
 
 const eraseButton = document.querySelector('.eraseButton')
 eraseButton.addEventListener('click', eraseFunction);
@@ -127,3 +124,4 @@ function eraseFunction() {
     });
   });
   }
+
