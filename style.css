@@ -1,22 +1,22 @@
 body {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }
 #container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .cells {
-    border: solid;
-    background-color: white;
-    border-width: 0px;
+  border: solid;
+  background-color: white;
+  border-width: 0px;
 }
 
 .firstButtonContainer,
 .secondButtonContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 100px;
 }
 
 .btn,
@@ -27,21 +27,21 @@ body {
 .resetButton,
 .holdDownButton,
 .eraseButton {
-    border-radius: 28px;
-    padding: 5px;
-    background-color: antiquewhite;
+  border-radius: 28px;
+  padding: 5px;
+  background-color: antiquewhite;
 }
 
 .bodyContainer {
-    display: flex;
-    align-items: center; /* Vertical alignment */
-    height: 100vh; /* Full viewport height */
-    justify-content: center;
-    gap: 16px;
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  height: 100vh; /* Full viewport height */
+  justify-content: center;
+  gap: 16px;
 }
 
 h1 {
-    text-align: center;
-    font-size: 60px;
-    margin: 0%;
+  text-align: center;
+  font-size: 60px;
+  margin: 0%;
 }
