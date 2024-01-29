@@ -27,11 +27,13 @@ defaultGrid();
 
 let isMouseDown = false;
 
+function mouseActivator() {
 const cells = document.querySelectorAll(".cells");
 cells.forEach((cell) => {
   cell.addEventListener("mousedown", handleMouseDown);
   cell.addEventListener("mouseup", handleMouseUp);
 });
+}
 
 function handleMouseDown(event) {
   isMouseDown = true;
@@ -41,7 +43,7 @@ function handleMouseDown(event) {
 
 function handleMouseUp() {
   isMouseDown = true;
-   container.removeEventListener("mousemove", handleDrawing);
+  container.removeEventListener("mousemove", handleDrawing);
 }
 
 function handleDrawing(event) {
@@ -53,11 +55,9 @@ function handleDrawing(event) {
     }
   }
 }
-
-
+ mouseActivator();
 function alertFunction() {
-  container.removeEventListener("mouseover", mouseOver);
-
+  container.removeEventListener("mousemove", handleDrawing);
   let userChoice = parseInt(prompt("Change grid size: "));
   if (isNaN(userChoice) || userChoice <= 0) {
     alert("Error");
@@ -73,7 +73,7 @@ function alertFunction() {
     cell.style.height = sum + "px";
   });
 
-  mouseOver();
+   mouseActivator();
 }
 
 const btn = document.querySelector(".btn");
@@ -99,6 +99,7 @@ function changeToRed() {
     });
   });
 }
+
 function changeToGreen() {
   const cells = document.querySelectorAll(".cells");
   cells.forEach((cell) => {
