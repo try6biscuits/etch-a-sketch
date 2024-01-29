@@ -30,11 +30,30 @@ let isMouseDown = false;
 const cells = document.querySelectorAll(".cells");
 cells.forEach((cell) => {
   cell.addEventListener("mousedown", handleMouseDown);
+  cell.addEventListener("mouseup", handleMouseUp);
 });
 
-function handleMouseDown() {
+function handleMouseDown(event) {
   isMouseDown = true;
+  const clickedCell = event.target;
+  container.addEventListener("mousemove", handleDrawing);
 }
+
+function handleMouseUp() {
+  isMouseDown = true;
+   container.removeEventListener("mousemove", handleDrawing);
+}
+
+function handleDrawing(event) {
+  if (isMouseDown) {
+    const currentCell = event.target; // Get the currently hovered cell
+    if (currentCell && currentCell.classList.contains("cells")) {
+      // Check if it's a valid cell
+      currentCell.style.backgroundColor = "black"; // Draw on the hovered cell
+    }
+  }
+}
+
 
 function alertFunction() {
   container.removeEventListener("mouseover", mouseOver);
