@@ -26,19 +26,19 @@ function defaultGrid() {
 defaultGrid();
 
 let isMouseDown = false;
-function mouseDown() {
-   const cells = document.querySelectorAll(".cells");
-   cells.forEach((cell) => {
-      cell.addEventListener("mousedown", handleMouseDown)
-   });
-}
+
+const cells = document.querySelectorAll(".cells");
+cells.forEach((cell) => {
+  cell.addEventListener("mousedown", handleMouseDown);
+});
+
 function handleMouseDown() {
   isMouseDown = true;
 }
 
 function alertFunction() {
   container.removeEventListener("mouseover", mouseOver);
-  
+
   let userChoice = parseInt(prompt("Change grid size: "));
   if (isNaN(userChoice) || userChoice <= 0) {
     alert("Error");
