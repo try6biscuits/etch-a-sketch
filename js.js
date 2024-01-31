@@ -72,77 +72,15 @@ function alertFunction() {
     cell.style.width = sum + "px";
     cell.style.height = sum + "px";
   });
-
    mouseActivator();
-}
-
-const btn = document.querySelector(".btn");
-btn.addEventListener("click", alertFunction);
-
-const changeToRedBtn = document.querySelector(".changeToRedBtn");
-changeToRedBtn.addEventListener("click", changeToRed);
-
-const changeToGreenBtn = document.querySelector(".changeToGreenBtn");
-changeToGreenBtn.addEventListener("click", changeToGreen);
-
-const changeToYellowBtn = document.querySelector(".changeToYellowBtn");
-changeToYellowBtn.addEventListener("click", changeToYellow);
-
-const changeToBlackBtn = document.querySelector(".changeToBlackBtn");
-changeToBlackBtn.addEventListener("click", changeToBlack);
-
-function changeToRed() {
-  const cells = document.querySelectorAll(".cells");
-  cells.forEach((cell) => {
-    cell.addEventListener("mouseover", function () {
-      this.style.backgroundColor = "red";
-    });
-  });
-}
-
-function changeToGreen() {
-  const cells = document.querySelectorAll(".cells");
-  cells.forEach((cell) => {
-    cell.addEventListener("mouseover", function () {
-      this.style.backgroundColor = "green";
-    });
-  });
-}
-
-function changeToYellow() {
-  const cells = document.querySelectorAll(".cells");
-  cells.forEach((cell) => {
-    cell.addEventListener("mouseover", function () {
-      this.style.backgroundColor = "yellow";
-    });
-  });
-}
-function changeToBlack() {
-  const cells = document.querySelectorAll(".cells");
-  cells.forEach((cell) => {
-    cell.addEventListener("mouseover", function () {
-      this.style.backgroundColor = "black";
-    });
-  });
 }
 
 const resetButton = document.querySelector(".resetButton");
 resetButton.addEventListener("click", resetGrid);
 
 function resetGrid() {
-  container.removeEventListener("mouseover", mouseOver);
+  container.removeEventListener("mousemove", handleDrawing);
   defaultGrid();
-  mouseOver();
+  mouseActivator();
 }
 
-const eraseButton = document.querySelector(".eraseButton");
-eraseButton.addEventListener("click", eraseFunction);
-
-function eraseFunction() {
-  const cells = document.querySelectorAll(".cells");
-  cells.forEach((cell) => {
-    cell.addEventListener("mouseover", function () {
-      this.style.backgroundColor = "white";
-    });
-  });
-}
