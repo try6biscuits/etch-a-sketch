@@ -19,10 +19,10 @@ body {
   max-width: 100px;
 }
 
-.btn,
+.changeGridSize,
 .changeToRedBtn,
 .changeToGreenBtn,
-.changeToYellowBtn,
+.changeToBlueBtn,
 .changeToBlackBtn,
 .resetButton,
 .holdDownButton,
@@ -30,6 +30,7 @@ body {
   border-radius: 28px;
   padding: 5px;
   background-color: antiquewhite;
+  font-family: pixelFont;
 }
 
 .bodyContainer {
