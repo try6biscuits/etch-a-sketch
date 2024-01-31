@@ -26,13 +26,14 @@ function defaultGrid() {
 defaultGrid();
 
 let isMouseDown = false;
+let colorToUse = "black"; // Default color
 
 function mouseActivator() {
-const cells = document.querySelectorAll(".cells");
-cells.forEach((cell) => {
-  cell.addEventListener("mousedown", handleMouseDown);
-  cell.addEventListener("mouseup", handleMouseUp);
-});
+  const cells = document.querySelectorAll(".cells");
+  cells.forEach((cell) => {
+    cell.addEventListener("mousedown", handleMouseDown);
+    cell.addEventListener("mouseup", handleMouseUp);
+  });
 }
 
 function handleMouseDown(event) {
@@ -42,20 +43,61 @@ function handleMouseDown(event) {
 }
 
 function handleMouseUp() {
-  isMouseDown = true;
+  isMouseDown = false;
   container.removeEventListener("mousemove", handleDrawing);
 }
 
 function handleDrawing(event) {
   if (isMouseDown) {
-    const currentCell = event.target; // Get the currently hovered cell
+    const currentCell = event.target;
     if (currentCell && currentCell.classList.contains("cells")) {
-      // Check if it's a valid cell
-      currentCell.style.backgroundColor = "black"; // Draw on the hovered cell
+      currentCell.style.backgroundColor = colorToUse; // Use the selected color
     }
   }
 }
- mouseActivator();
+
+mouseActivator();
+
+// Function to change the color to red
+function changeColorToRed() {
+  colorToUse = "red";
+}
+function changeColorToGreen() {
+  colorToUse = "green";
+}
+function changeColorToBlue() {
+  colorToUse = "blue";
+}
+function changeColorToBlack() {
+  colorToUse = "black";
+}
+
+function changeColorToWhite() {
+  colorToUse = "white";
+}
+
+// Add event listener to the "Change to Red" button
+const changeToRedBtn = document.querySelector(".changeToRedBtn");
+changeToRedBtn.addEventListener("click", changeColorToRed);
+
+const changeToGreenBtn = document.querySelector(".changeToGreenBtn");
+changeToGreenBtn.addEventListener("click", changeColorToGreen);
+
+const changeToBlueBtn = document.querySelector(".changeToBlueBtn");
+changeToBlueBtn.addEventListener("click", changeColorToBlue);
+
+const changeToBlackBtn = document.querySelector(".changeToBlackBtn");
+changeToBlackBtn.addEventListener("click", changeColorToBlack);
+
+const changeToWhiteBtn = document.querySelector(".eraseButton");
+changeToWhiteBtn.addEventListener("click", changeColorToWhite);
+
+
+const changeGridSize = document.querySelector(".changeGridSize");
+changeGridSize.addEventListener("click", alertFunction);
+
+mouseActivator();
+
 function alertFunction() {
   container.removeEventListener("mousemove", handleDrawing);
   let userChoice = parseInt(prompt("Change grid size: "));
